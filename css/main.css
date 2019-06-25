@@ -145,6 +145,8 @@ body {
 	overflow: hidden;
 }
 
+/*    -****-    */
+
 
 /*    Стили Хэдера    */
 
@@ -201,10 +203,12 @@ header {
 
 	font-size: calc( (100vw - 36rem)/(192 - 36) * (1.8 - 1.4) + 1.4rem);
 	font-family: 'Roboto_condenced-regular', sans-serif;
+
 	color: #393d3c;
 	text-transform: uppercase;
 	line-height: 1;
 }
+
 
 	/*    Стили Socials    */
 
@@ -232,6 +236,14 @@ header {
 
 	.socials__svg {
 		fill: #7bcbc1;
+	}
+
+	.socials__link:hover .socials__svg {
+		fill: #f8c255;
+	}
+
+	.socials__link:hover ~.socials__svg {
+		fill: #f8c255;
 	}
 
 /*	.socials__svg.fb {
@@ -263,6 +275,7 @@ header {
 .header__address, 
 .header__contacts {
 	font-size: calc( (100vw - 36rem)/(192 - 36) * (1.5 - 1) + 1rem);
+	font-weight: 500;
 	color: #e9eae2;
 	text-transform: uppercase;
 	line-height: 1.077;
@@ -291,7 +304,7 @@ header {
 	cursor: pointer;
 }
 
-	/*    -****-    */
+/*    -****-    */
 
 
 /*    Media хэдера    */
@@ -353,6 +366,15 @@ header {
 
 /*    Стили навигации    */
 
+@keyframes nav-appear {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
 .nav {
 	position: absolute;
 	top: 50px;
@@ -392,6 +414,9 @@ header {
 	display: -o-flex;
 	display: flex;
 	z-index: 1;
+	-webkit-animation: nav-appear 1.5s;
+	-o-animation: nav-appear 1.5s;
+	animation: nav-appear 1.5s;
 }
 
 .nav__link {
@@ -409,7 +434,7 @@ header {
 	color: #7acec3;
 }
 
-	/*    -****-    */
+/*    -****-    */
 
 
 
@@ -470,7 +495,6 @@ header {
 
 	.hamburger--active .nav__cross::before {
 		display: none;
-		
 	}
 
 	.nav__cross {
@@ -480,7 +504,7 @@ header {
 		margin: 0 auto;
 
 		background-color: #e9eae2;
-		transition: background-color 500ms ease-in-out;
+		transition: all 500ms ease-in-out;
 	}
 
 	.nav__cross::before, .nav__cross::after {
@@ -512,3 +536,59 @@ header {
 
 
 	/*    -****-    */
+
+/*   Nav list deactivate    */
+
+.hamburger--active:hover .nav__cross {
+	transform: rotate(180deg);
+	background-color: #e9eae2;
+}
+
+.hamburger--active:hover .nav__cross::after {
+	display: none;
+}
+
+/*    -****-    */
+
+/*    Nav media    */
+
+@media ( min-width: 1500px ) {
+
+	.nav__list {
+		min-width: 1100px;
+	}
+}
+
+@media ( max-width: 980px ) {
+
+	.nav {
+		top: 30px;
+		right: 30px;
+	}
+}
+
+@media ( max-width: 768px ) {
+
+	.nav {
+		height: 100%;
+	}
+
+	.nav__hamburger {
+		width: 70px;
+		height: 70px;
+	}
+
+	.nav__list--active {
+		display: block;
+		min-width: auto;
+		max-height: 250px;
+		padding: 30px 70px;
+		overflow-y: auto;
+	}
+
+	.nav__link {
+		display: block;
+		padding: 7px 80px 7px 0;
+	}
+}
+
