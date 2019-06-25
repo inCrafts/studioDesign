@@ -1,0 +1,343 @@
+/**
+*	Стили страницы
+**/
+
+/**    
+*	Colors:
+*
+*	main bg: #e9eae2;
+*	common txt: #393d3c;
+*	socials: #7bcbc1;
+*	nav bg: #f8c255;
+*	proj: #ebb240;
+*	
+**/
+
+/**
+*	Fonts:
+*
+* font-family: 'Roboto_condenced-regular', sans-serif;
+* font-family: 'Roboto_condenced-bold', sans-serif;
+* font-family: 'Roboto_condenced-bold-italic', sans-serif;
+* font-family: 'Roboto_condenced-italic', sans-serif;
+* font-family: 'Roboto_condenced-light-italic', sans-serif;
+* font-family: 'Roboto_condenced-light', sans-serif;
+*
+*	font-size: calc( (100vw - 96rem)/(192 - 96) * (8 - 4.5) + 4.5rem);
+*	margin-top: calc( (100vw - 96rem)/(192 - 96) * (5 - 3.5) + 3.5rem);
+*	/*font-size: calc( (100vw - 480px)/(1280 - 480) * (24 - 16) + 16px);*/
+**/
+
+@font-face { 
+    font-family: 'Roboto_condenced-regular';
+    src: url('../fonts/robotocondensed-regular-webfont.woff2') format("woff2"),
+         url('../fonts/robotocondensed-regular-webfont.woff') format("woff"), 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face { 
+    font-family: 'Roboto_condenced-bold';
+    src: url('../fonts/robotocondensed-bold-webfont.woff2') format("woff2"),
+         url('../fonts/robotocondensed-bold-webfont.woff') format("woff"), 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face { 
+    font-family: 'Roboto_condenced-bold-italic';
+    src: url('../fonts/robotocondensed-bolditalic-webfont.woff2') format("woff2"),
+         url('../fonts/robotocondensed-bolditalic-webfont.woff2') format("woff"), 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face { 
+    font-family: 'Roboto_condenced-italic';
+    src: url('../fonts/robotocondensed-italic-webfont.woff2') format("woff2"),
+         url('../fonts/robotocondensed-italic-webfont.woff') format("woff"), 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face { 
+    font-family: 'Roboto_condenced-light-italic';
+    src: url('../fonts/robotocondensed-lightitalic-webfont.woff2') format("woff2"),
+         url('../fonts/robotocondensed-lightitalic-webfont.woff') format("woff"), 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face { 
+    font-family: 'Roboto_condenced-light';
+    src: url('../fonts/robotocondensed-light-webfont.woff2') format("woff2"),
+         url('../fonts/robotocondensed-light-webfont.woff') format("woff"), 
+    font-weight: normal;
+    font-style: normal;
+}
+
+/**
+*	Fonts:
+*
+* font-family: 'Roboto_condenced-regular', sans-serif;
+* font-family: 'Roboto_condenced-bold', sans-serif;
+* font-family: 'Roboto_condenced-bold-italic', sans-serif;
+* font-family: 'Roboto_condenced-italic', sans-serif;
+* font-family: 'Roboto_condenced-light-italic', sans-serif;
+* font-family: 'Roboto_condenced-light', sans-serif;
+*
+**/
+
+/*    Базовые стили    */
+
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Roboto_condenced-regular', Arial, sans-serif;
+	font-size: 1.6rem;
+	font-weight: 400;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	color: #000000;
+}
+
+.container {
+	min-width: 320px;
+	max-width: 100%;
+
+	background-color: #e9eae2;
+}
+
+.wrap {
+	min-width: 320px;
+	max-width: 1200px;
+	margin: 0 auto;
+
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+
+	border: 0;
+	padding: 0;
+
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0, 0, 0, 0);
+	overflow: hidden;
+}
+
+
+/*    Стили Хэдера    */
+
+header {
+	display: grid;
+	grid-template-columns: repeat(16, 1fr);
+}
+
+.header__left {
+	grid-column: span 11;
+	padding-left: 15.9%;
+	padding-top: 4.8%;
+	padding-bottom: 8.7%;
+
+	background-image: url('../img/image1.png');
+	background-repeat: no-repeat;
+	background-position: 100% center;
+
+	-webkit-background-size: 100%;
+	background-size: 100%;	
+}
+
+.header__logo {
+	display: block;
+	max-width: 100%;
+}
+
+.header__right {
+	position: relative;
+
+	grid-column: span 5;
+	padding-top: 10.7%;
+
+	background-color: #7acec3;
+}
+
+.header__right::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	width: 100%;
+	height: 100%;
+
+	background-image: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><line x1="0" y1="100%" x2="100%" y2="0" stroke="rgb(255,255,255)" stroke-width="1"/></svg>');
+}
+
+.header__slogan {
+	max-width: 110px;
+	margin-top: 5px;
+
+	font-size: calc( (100vw - 36rem)/(192 - 36) * (1.8 - 1.4) + 1.4rem);
+	font-family: 'Roboto_condenced-regular', sans-serif;
+	color: #393d3c;
+	text-transform: uppercase;
+	line-height: 1;
+}
+
+	/*    Стили Socials    */
+
+	.socials {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		-ms-align-items: flex-end;
+		align-items: flex-end;
+
+		margin: 0;
+		padding: 0;
+		list-style: none;	
+	}
+
+	.socials__item {
+		margin-right: 12px;
+	}
+
+	.socials__item:last-child {
+		margin-right: 0;
+	}
+
+	.socials__svg {
+		fill: #7bcbc1;
+	}
+
+/*	.socials__svg.fb {
+		width: 10px;
+		height: 22px;
+	}
+
+	.socials__svg.tw {
+		width: 26px;
+		height: 21px;
+	}
+
+	.socials__svg.in {
+		width: 24px;
+		height: 23px;
+	}
+
+	.socials__svg.google {
+		width: 19px;
+		height: 19px;
+	}*/
+
+	/*    -****-    */
+
+.header__socials {
+	margin: 60px 15px 15px;
+}
+
+.header__address, .header__contacts {
+	font-size: calc( (100vw - 36rem)/(192 - 36) * (1.5 - 1) + 1rem);
+	color: #ffffff;
+	text-transform: uppercase;
+	line-height: 1.077;
+}
+
+.header__address {
+	position: absolute;
+	left: 12.9%;
+	bottom: 36.5%;
+}
+
+.header__contacts {
+	position: absolute;
+	left: 29.9%;
+	bottom: 20.5%;
+}
+
+.header__phone, .header__email {
+	text-decoration: none;
+	color: #ffffff;
+	transition: color 500ms;
+}
+
+.header__phone:hover, .header__email:hover {
+	color: #ebb240;
+	cursor: pointer;
+	z-index: 2;
+}
+
+/*    Media хэдера    */
+
+@media ( min-resolution: 2dppx ) or ( min-width: 1500px ) {
+	.header__left {
+		background-image: url('../img/image1-2x.png');
+	}
+
+	.header__logo {
+		content: url('../img/logo-2x.png');
+	}
+}
+
+@media ( max-width: 980px ) {
+
+	.header__left {
+		grid-column: span 9;
+	}
+
+	.header__right {
+		grid-column: span 7;
+	}
+}
+
+@media ( max-width: 560px ) {
+
+	header {
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr;
+	}
+
+		.header__left {
+		grid-column: span 1;
+		grid-row: 2 / 3;
+	}
+
+	.header__right {
+		grid-column: span 1;
+		grid-row: 1 / 2;
+	}
+
+	.header__address {
+		position: static;
+		margin-left: 20%;
+		margin-top: 10%;
+	}
+
+	.header__contacts {
+		position: static;
+		margin-left: 50%;
+		margin-top: 20%;
+		margin-bottom: 15%;
+	}
+}
